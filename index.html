@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راز تو</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Vazir', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            background-color: #ff0080;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .box {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="page1">
+        <h1>سلام مهتاب قشنگم</h1>
+        <p>میدونم غمگینی، خواستم بهت یه چیزی رو نشون بدم.</p>
+        <button onclick="nextPage(1)">ادامه بده</button>
+    </div>
+
+    <div class="box hidden" id="page2">
+        <p>میخوام بهت بگم که توی این دنیا که این همه آدم وجود داره، این همه کهکشان و سیاره وجود داره، تو قشنگ‌ترین و زیباترینی.</p>
+        <button onclick="nextPage(2)">صفحه بعد</button>
+    </div>
+
+    <div class="box hidden" id="page3">
+        <p>یادت باشه، حتی اگه ناراحت باشی یا هر چی، پیشتم تا حالت خوبِ خوب بشه.</p>
+        <button onclick="nextPage(3)">آخرین راز</button>
+    </div>
+
+    <div class="box hidden" id="page4">
+        <p>حتی اگه از تاریکی‌های درونت هم حرف بزنی، تو رو جوری نگاه می‌کنم انگار خورشیدی.</p>
+        <p>دوستت دارم زیبای من.</p>
+    </div>
+
+    <script>
+        function nextPage(page) {
+            document.getElementById("page" + page).classList.add("hidden");
+            document.getElementById("page" + (page + 1)).classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
